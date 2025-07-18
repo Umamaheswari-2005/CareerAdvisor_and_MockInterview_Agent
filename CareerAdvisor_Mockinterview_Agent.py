@@ -1,15 +1,9 @@
-!pip install langchain_groq
-!pip install langchain-community
-!pip install PyPDF
-
 import os
 import streamlit as st
 from langchain.chains import ConversationChain
 from langchain.memory import ConversationBufferMemory
 from langchain_groq import ChatGroq
 from langchain.document_loaders import PyPDFLoader
-
-os.environ["GROQ_API_KEY"] = "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"
 
 llm = ChatGroq(model="llama3-8b-8192", temperature=0.6, max_tokens=2048)
 memory = ConversationBufferMemory()
