@@ -1,5 +1,3 @@
-%%writefile CareerAdvisor_Mockinterview_Agent.py
-
 import os
 import streamlit as st
 from langchain.chains import ConversationChain
