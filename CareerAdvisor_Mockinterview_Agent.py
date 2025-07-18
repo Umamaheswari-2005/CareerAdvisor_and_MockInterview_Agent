@@ -1,6 +1,6 @@
-pip install langchain_groq
-pip install langchain-community
-pip install PyPDF
+!pip install langchain_groq
+!pip install langchain-community
+!pip install PyPDF
 
 import os
 import streamlit as st
