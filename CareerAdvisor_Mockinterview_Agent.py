@@ -5,6 +5,10 @@ from langchain.memory import ConversationBufferMemory
 from langchain_groq import ChatGroq
 from langchain.document_loaders import PyPDFLoader
 
+os.environ["GROQ_API_KEY"] = "your_key"
+
+os.environ["GROQ_API_KEY"] = st.secrets["GROQ_API_KEY"]
+
 llm = ChatGroq(model="llama3-8b-8192", temperature=0.6, max_tokens=2048)
 memory = ConversationBufferMemory()
 career_chain = ConversationChain(llm=llm, memory=memory)
