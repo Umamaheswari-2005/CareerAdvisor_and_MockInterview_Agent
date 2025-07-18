@@ -21,7 +21,7 @@ uploaded_file = st.file_uploader("📄 Upload Resume (PDF)", type="pdf")
 resume_text = ""
 
 if uploaded_file:
-    file_path = os.path.join("/content", uploaded_file.name)
+    file_path = uploaded_file.name
     with open(file_path, "wb") as f:
         f.write(uploaded_file.getbuffer())
 
